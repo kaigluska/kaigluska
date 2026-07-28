@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggle && links) {
     toggle.addEventListener("click", function () {
       var open = links.classList.toggle("open");
+      toggle.classList.toggle("open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.textContent = open ? "Close" : "Menu";
     });
     links.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         links.classList.remove("open");
-        toggle.textContent = "Menu";
+        toggle.classList.remove("open");
       });
     });
   }
