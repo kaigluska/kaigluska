@@ -1,4 +1,4 @@
-/* Kai Gluska — site styles
+/* Kai Gluska â€” site styles
    Type: Newsreader (display) / Inter (body) / IBM Plex Mono (utility)
    Palette: ink #12100D, parchment #EDE6D6, copper #C17A3D, ember #8C3229, brass #A68A5B
 */
@@ -86,8 +86,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   border-bottom: 1px solid transparent;
 }
 .site-header.solid {
-  background: rgba(18, 16, 13, 0.92);
-  backdrop-filter: blur(6px);
+  background: var(--ink-2);
+  box-shadow: 0 1px 0 var(--line-strong), 0 12px 28px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid var(--line);
   padding: 14px 0;
 }
@@ -133,17 +133,29 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
   .nav-links.open { transform: translateX(0); }
   .nav-toggle {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
     background: none;
     border: 1px solid var(--line-strong);
-    color: var(--parchment);
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    padding: 8px 12px;
+    padding: 0;
     z-index: 60;
     position: relative;
   }
+  .nav-toggle .bar {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: var(--parchment);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  .nav-toggle.open .bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle.open .bar:nth-child(2) { opacity: 0; }
+  .nav-toggle.open .bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 }
 
 /* ---------- Hero ---------- */
