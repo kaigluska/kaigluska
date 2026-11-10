@@ -333,6 +333,7 @@ section.tight { padding: 72px 0; }
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+.video-row > * { min-width: 0; }
 .video-short-wrap {
   margin-top: 20px;
   max-width: 280px;
