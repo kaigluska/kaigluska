@@ -1,17 +1,12 @@
 /* Self-hosted fonts (no third-party requests) */
-@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/newsreader-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/newsreader-latin-400-italic.woff2") format("woff2"); }
-@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/newsreader-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 500; font-display: swap; src: url("../fonts/newsreader-latin-500-italic.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/inter-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/inter-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/inter-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/inter-latin-700-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Libre Caslon Text"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("../fonts/libre-caslon-text-variable.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/jost-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/jost-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/jost-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/jost-latin-400-italic.woff2") format("woff2"); }
 
 /* Kai Gluska — site styles
-   Type: Newsreader (display) / Inter (body) / IBM Plex Mono (utility)
+   Type: Libre Caslon Text (display) / Jost (body + labels)
    Palette: ink #12100D, parchment #EDE6D6, copper #C17A3D, ember #8C3229, brass #A68A5B
 */
 
@@ -27,9 +22,9 @@
   --line: rgba(237, 230, 214, 0.14);
   --line-strong: rgba(237, 230, 214, 0.28);
 
-  --display: "Newsreader", ui-serif, Georgia, serif;
-  --body: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --display: "Libre Caslon Text", ui-serif, Georgia, serif;
+  --body: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --mono: "Jost", ui-sans-serif, system-ui, sans-serif;
 
   --maxw: 1180px;
 }
@@ -73,8 +68,8 @@ h1, h2, h3 {
   color: var(--parchment);
 }
 
-h1 { font-size: clamp(3rem, 9vw, 6.5rem); line-height: 0.98; letter-spacing: -0.01em; }
-h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-style: italic; font-weight: 400; }
+h1 { font-size: clamp(2.75rem, 8vw, 6rem); line-height: 0.98; letter-spacing: -0.02em; font-weight: 500; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-style: normal; font-weight: 400; }
 h3 { font-size: 1.3rem; }
 
 p { margin: 0 0 1.1em; color: var(--parchment); }
@@ -111,7 +106,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .brand {
   font-family: var(--display);
-  font-style: italic;
+  font-style: normal;
   font-size: 1.25rem;
   letter-spacing: 0.01em;
 }
@@ -200,7 +195,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .hero h1 { margin-top: 14px; }
 .hero .role {
   font-family: var(--display);
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(1.1rem, 2.2vw, 1.5rem);
   color: var(--parchment-dim);
   margin-top: 18px;
@@ -450,7 +445,7 @@ section.tight { padding: 72px 0; }
 .page-hero .wrap { position: relative; z-index: 2; padding-bottom: 56px; }
 
 .content-block { max-width: 68ch; }
-.content-block p.lead { font-size: 1.25rem; font-family: var(--display); font-style: italic; color: var(--parchment); }
+.content-block p.lead { font-size: 1.25rem; font-family: var(--display); font-style: normal; color: var(--parchment); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
